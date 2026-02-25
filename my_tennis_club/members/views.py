@@ -1,4 +1,7 @@
 from django.shortcuts import HttpResponse
+from django.template import loader
 
 def members(request):
-    return HttpResponse("Hello Word!")
+    template = loader.get_template('myfirst.html')
+    return HttpResponse(template.render())
+
