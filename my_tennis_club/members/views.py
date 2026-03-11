@@ -6,7 +6,7 @@ def members(request):
     my_members = Member.objects.all().values()
     template = loader.get_template('all_members.html')
     context = {
-        'members': my_members,
+        'my_members': my_members,
     }
     return HttpResponse(template.render(context, request))
 
@@ -18,4 +18,7 @@ def details(request, id):
     }
     return HttpResponse(template.render(context, request))
 
+def main(request):
+    template = loader.get_template('main.html')
+    return HttpResponse(template.render())
 

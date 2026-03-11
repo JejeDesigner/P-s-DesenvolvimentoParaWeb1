@@ -7,3 +7,7 @@ class Member(models.Model):
     phone = models.IntegerField(null=True)
     joined_date = models.DateField(null=True)
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
+
+
