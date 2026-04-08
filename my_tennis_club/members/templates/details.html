@@ -6,9 +6,20 @@
 
 
 {% block content %}
-        <h2>{{ my_members.first_name }} {{ my_members.last_name }}</h2>
-        <p>Phone: {{ my_members.phone }}</p>
-        <p>Member since: {{ my_members.joined_date }}</p>
+    <div class="card mt-2">
 
-        <p>Back to <a href="/members">Members</a></p>
+        <div class="card-header">
+           Details about {{ my_members.first_name }} {{ my_members.last_name }}
+        </div>
+
+        <div class="card-body">
+            <h1>{{ my_members.first_name}} {{ my_members.last_name }}</h1>
+            <p>Phone: {{ my_members.phone }}</p>
+            <p>Member since: {{ my_members.joined_date }}</p>
+
+            <p><a href="/members">Voltar</a></p>
+
+        </div>
+     </div>
+
 {% endblock %}
